@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1,
+        "name": "Engineering Software Suite",
+        "thumbnail": "https://i.ibb.co.com/5hT4923b/icons8-engineering-96.png",
+        "banner": "",
+        "frequency": "Quarterly",
+        "price": 299.99,
+        "description": "Professional-grade engineering software bundle including SolidWorks, MATLAB, and ANSYS licenses",
+        "tech_category": "Engineering Software",
+        "features": [
+            "SolidWorks Student Edition",
+            "MATLAB Campus License",
+            "ANSYS Student Access",
+            "AutoCAD Web App"
+        ],
+        "subscription_benefits": [
+            "Cloud rendering credits",
+            "Priority technical support",
+            "Exclusive engineering webinars"
+        ],
+        "ratings": 4.8,
+        "number_of_reviews": 427
+    },
+    {
+        "id": 2,
+        "name": "Academic Research Pro",
+        "thumbnail": "https://i.ibb.co.com/4ZPb64js/icons8-case-study-96.png",
+        "banner": "",
+        "frequency": "Semesterly",
+        "price": 199.99,
+        "description": "Essential research tools including IEEE Xplore access, LaTeX editors, and reference managers",
+        "tech_category": "Academic Tools",
+        "features": [
+            "IEEE Xplore 10-paper/month",
+            "Overleaf Pro Account",
+            "Zotero Premium",
+            "Grammarly Edu"
+        ],
+        "subscription_benefits": [
+            "Plagiarism checker credits",
+            "Research methodology courses",
+            "Journal submission templates"
+        ],
+        "ratings": 4.7,
+        "number_of_reviews": 312
+    },
+    {
+        "id": 3,
+        "name": "Developer Toolkit",
+        "thumbnail": "https://i.ibb.co.com/JjZ6hLXg/icons8-developer-96.png",
+        "banner": "",
+        "frequency": "Monthly",
+        "price": 89.99,
+        "description": "Complete development environment with JetBrains IDEs, GitHub Copilot, and Docker",
+        "tech_category": "Development Tools",
+        "features": [
+            "JetBrains All Products Pack",
+            "GitHub Copilot Business",
+            "Docker Pro",
+            "Postman API Platform"
+        ],
+        "subscription_benefits": [
+            "AWS Educate credits",
+            "Daily coding challenges",
+            "Expert code reviews"
+        ],
+        "ratings": 4.9,
+        "number_of_reviews": 538
+    },
+    {
+        "id": 4,
+        "name": "Data Science Lab",
+        "thumbnail": "https://i.ibb.co.com/cKTcPXmR/icons8-data-science-64.png",
+        "banner": "",
+        "frequency": "Monthly",
+        "price": 149.99,
+        "description": "Comprehensive data science platform with JupyterLab, Tableau, and Kaggle datasets",
+        "tech_category": "Data Science",
+        "features": [
+            "JupyterLab Pro",
+            "Tableau Student",
+            "Kaggle Notebooks+",
+            "Google Colab Pro"
+        ],
+        "subscription_benefits": [
+            "Premium dataset access",
+            "ML model deployment credits",
+            "Live Q&A with data scientists"
+        ],
+        "ratings": 4.8,
+        "number_of_reviews": 389
+    },
+    {
+        "id": 5,
+        "name": "STEM Education Bundle",
+        "thumbnail": "https://i.ibb.co.com/LhX2sHgm/icons8-education-80.png",
+        "banner": "",
+        "frequency": "Yearly",
+        "price": 499.99,
+        "description": "Complete STEM learning solution with Wolfram, Coursera, and Labster",
+        "tech_category": "Education",
+        "features": [
+            "Wolfram Alpha Pro",
+            "Coursera Plus",
+            "Labster Virtual Labs",
+            "Brilliant Premium"
+        ],
+        "subscription_benefits": [
+            "Certification exam vouchers",
+            "1:1 tutoring sessions",
+            "Career coaching"
+        ],
+        "ratings": 4.9,
+        "number_of_reviews": 267
+    },
+    {
+        "id": 6,
+        "name": "Electronics Workbench",
+        "thumbnail": "https://i.ibb.co.com/F4dj2W7b/icons8-electronics-96.png",
+        "banner": "",
+        "frequency": "Quarterly",
+        "price": 179.99,
+        "description": "Hardware/software bundle with Altium, LTSpice, and Arduino Cloud",
+        "tech_category": "Electronics",
+        "features": [
+            "Altium CircuitMaker",
+            "LTSpice Pro",
+            "Arduino Cloud Premium",
+            "PCBWay prototyping credits"
+        ],
+        "subscription_benefits": [
+            "Circuit design reviews",
+            "Component sourcing assistance",
+            "Monthly project kits"
+        ],
+        "ratings": 4.7,
+        "number_of_reviews": 194
+    }
+]
