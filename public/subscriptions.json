@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Engineering Software Suite",
-        "thumbnail": "https://i.ibb.co.com/5hT4923b/icons8-engineering-96.png",
+        "thumbnail": "https://i.ibb.co.com/kVCyTQH8/icons8-engineering-64.png",
         "banner": "",
         "frequency": "Quarterly",
         "price": 299.99,
@@ -136,5 +136,97 @@
         ],
         "ratings": 4.7,
         "number_of_reviews": 194
+    },
+    {
+        "id": 7,
+        "name": "Cloud Engineering Suite",
+        "thumbnail": "https://i.ibb.co.com/tPcJXYFC/icons8-cloud-100.png",
+        "banner": "",
+        "frequency": "Monthly",
+        "price": 129.99,
+        "description": "Comprehensive cloud computing resources for engineering applications and deployments",
+        "tech_category": "Cloud Computing",
+        "features": [
+            "AWS Educate Credits",
+            "Azure Student Credits",
+            "Google Cloud Platform Credits",
+            "Cloud IDE Access"
+        ],
+        "subscription_benefits": [
+            "Architecture Design Reviews",
+            "Cost Optimization Guides",
+            "Serverless Computing Resources"
+        ],
+        "ratings": 4.7,
+        "number_of_reviews": 156
+    },
+    {
+        "id": 8,
+        "name": "Mechanical Engineering Lab",
+        "thumbnail": "https://i.ibb.co.com/vvBWbKSY/icons8-mechanical-96.png",
+        "banner": "",
+        "frequency": "Quarterly",
+        "price": 229.99,
+        "description": "Specialized tools for mechanical engineering students and professionals",
+        "tech_category": "Mechanical Engineering",
+        "features": [
+            "Fusion 360 Educational License",
+            "SolidEdge Student Edition",
+            "CFD Simulation Credits",
+            "3D Printing Software Suite"
+        ],
+        "subscription_benefits": [
+            "FEA Tutorial Library",
+            "Design Validation Tools",
+            "Manufacturing Process Guides"
+        ],
+        "ratings": 4.8,
+        "number_of_reviews": 201
+    },
+    {
+        "id": 9,
+        "name": "AI Research Platform",
+        "thumbnail": "https://i.ibb.co.com/VcS71j39/icons8-ai-96.png",
+        "banner": "",
+        "frequency": "Monthly",
+        "price": 159.99,
+        "description": "Cutting-edge artificial intelligence tools and research resources",
+        "tech_category": "Artificial Intelligence",
+        "features": [
+            "PyTorch Premium Resources",
+            "TensorFlow Pro Tools",
+            "AI Paper Repository Access",
+            "GPU Compute Hours"
+        ],
+        "subscription_benefits": [
+            "Model Training Optimization",
+            "Research Paper Writing Tools",
+            "AI Ethics Framework Library"
+        ],
+        "ratings": 4.9,
+        "number_of_reviews": 287
+    },
+    {
+        "id": 10,
+        "name": "Civil Engineering Toolkit",
+        "thumbnail": "https://i.ibb.co.com/kpYLfcw/icons8-civil-engineering-64.png",
+        "banner": "",
+        "frequency": "Semesterly",
+        "price": 279.99,
+        "description": "Essential software and resources for civil engineering students",
+        "tech_category": "Civil Engineering",
+        "features": [
+            "AutoCAD Civil 3D",
+            "Revit Structure",
+            "STAAD.Pro Student",
+            "GIS Mapping Tools"
+        ],
+        "subscription_benefits": [
+            "Structural Analysis Tutorials",
+            "Project Planning Templates",
+            "Material Specification Library"
+        ],
+        "ratings": 4.6,
+        "number_of_reviews": 134
     }
 ]

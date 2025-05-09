@@ -12,7 +12,9 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
+                loader: () => fetch("/subscriptions.json"),
                 element: <Home></Home>,
+                hydrateFallbackElement: <Loader></Loader>,
             },
             {
                 path: "/my-profile",

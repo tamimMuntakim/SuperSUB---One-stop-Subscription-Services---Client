@@ -9,7 +9,7 @@ const HomeLayout = () => {
             <header className='w-11/12 md:container mx-auto'>
                 <Navbar></Navbar>
             </header>
-            <main className='w-11/12 md:container mx-auto my-4 md:my-8 min-h-[calc(100vh-310px)] md:min-h-[calc(100vh-325px)]'> 
+            <main className='w-11/12 md:container mx-auto my-4 md:my-8 space-y-8 md:space-y-12 min-h-[calc(100vh-310px)] md:min-h-[calc(100vh-325px)]'> 
                 <Outlet></Outlet>
             </main>
             <footer>

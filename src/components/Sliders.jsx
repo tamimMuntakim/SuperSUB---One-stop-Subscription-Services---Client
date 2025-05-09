@@ -52,7 +52,7 @@ const Sliders = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div className={`hero min-h-[320px] md:min-h-[400px] ${slide.bgColor} text-white`}>
+                        <div className={`hero min-h-[320px] md:min-h-[380px] ${slide.bgColor} text-white`}>
                             <div className="hero-content text-center">
                                 <div className="max-w-2xl flex flex-col justify-center items-center gap-3 md:gap-6">
                                     <h1 className="text-2xl md:text-5xl font-bold">{slide.title}</h1>
