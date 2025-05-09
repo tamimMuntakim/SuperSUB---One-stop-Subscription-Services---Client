@@ -26,7 +26,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/service-details/:id",
-                element: <ServiceDetails></ServiceDetails>
+                loader: () => fetch("/subscriptions.json"),
+                element: <ServiceDetails></ServiceDetails>,
+                hydrateFallbackElement: <Loader></Loader>,
             },
         ]
     },
