@@ -4,6 +4,10 @@ import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
 import MyProfile from "../pages/MyProfile";
 import Loader from "../pages/Loader";
+import ServiceDetails from "../pages/ServiceDetails";
+import AuthLayout from "../layouts/AuthLayout";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -21,8 +25,22 @@ const router = createBrowserRouter([
                 element: <MyProfile></MyProfile>,
             },
             {
-                path: "/loader",
-                element: <Loader></Loader>,
+                path: "/service-details/:id",
+                element: <ServiceDetails></ServiceDetails>
+            },
+        ]
+    },
+    {
+        path: "/auth",
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login></Login>,
+            },
+            {
+                path: "/auth/register",
+                element: <Register></Register>,
             },
         ]
     },
