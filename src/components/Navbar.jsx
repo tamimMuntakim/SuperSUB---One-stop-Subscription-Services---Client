@@ -5,7 +5,7 @@ import "./Navbar.css";
 const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="my-profile">My Profile</NavLink></li>
+        <li><NavLink to="/my-profile">My Profile</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 p-0 flex justify-between">
@@ -16,11 +16,11 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-32 py-2 gap-2 shadow-lg">
                         {links}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-lg md:text-xl px-0"><img width="50" height="50" src="https://i.ibb.co.com/N2Tn9j9M/subscription.png" alt="subscription" className='hidden md:inline' />Super<p className='-ml-1 text-accent font-bold'>SUB</p></Link>
+                <Link to="/" className="btn btn-ghost text-lg md:text-2xl px-0 text-primary font-bold"><img width="50" height="50" src="https://i.ibb.co.com/N2Tn9j9M/subscription.png" alt="subscription" className='hidden md:inline' />Super<p className='-ml-1 text-secondary '>SUB</p></Link>
             </div>
             <div className="hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-4">
@@ -33,7 +33,7 @@ const Navbar = () => {
                         <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
                     </div>
                 </div>
-                <Link to="" className='btn btn-primary md:font-bold text-white'>Login</Link>
+                <Link to="" className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Login</Link>
             </div>
         </div>
     );
