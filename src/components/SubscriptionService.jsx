@@ -6,7 +6,7 @@ const SubscriptionService = ({ service }) => {
     return (
         <div className='flex gap-3 p-2 md:gap-4 md:p-4 border border-slate-300 rounded-2xl shadow-md hover:shadow-lg items-center'>
             <div className='bg-slate-100 rounded-xl p-1 md:p-2 shadow-md grow-0'>
-                <img src={thumbnail} alt="" className='h-[60px] w-[60px] md:h-[100px] md:w-[100px] object-contain rounded md:rounded-xl shadow-md' />
+                <img src={thumbnail} alt="" className='bg-white h-[60px] w-[60px] md:h-[100px] md:w-[100px] object-contain rounded md:rounded-xl shadow-md' />
             </div>
             <div className='flex flex-col gap-2'>
                 <div className="badge badge-sm md:badge-lg badge-soft badge-success shadow-xs">{frequency}</div>

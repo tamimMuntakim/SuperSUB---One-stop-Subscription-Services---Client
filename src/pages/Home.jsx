@@ -3,6 +3,7 @@ import Sliders from '../components/Sliders';
 import { useLoaderData } from 'react-router';
 import SubscriptionServices from '../components/SubscriptionServices';
 import Partners from '../components/Partners';
+import ComingSoon from '../components/ComingSoon';
 
 const Home = () => {
     const subscriptionServices = useLoaderData();
@@ -14,6 +15,9 @@ const Home = () => {
         </section>
         <section id="subscribed-services">
             <SubscriptionServices subscriptionServices={subscriptionServices}></SubscriptionServices>
+        </section>
+        <section id="coming-soon">
+            <ComingSoon></ComingSoon>
         </section>
         <section id="partners">
             <Partners></Partners>
