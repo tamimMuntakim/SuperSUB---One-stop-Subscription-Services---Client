@@ -38,8 +38,8 @@ const Partners = () => {
             <Marquee pauseOnHover={true} speed={50} className='h-[100px] md:h-[220px]'>
                 {partners.map((partner, index) => (
                     <div key={index} className="mr-4 md:mr-12 flex flex-col gap-2 md:gap-4 justify-center items-center bg-base-100 px-3 py-2 md:px-4 md:py-3 rounded-xl shadow-sm md:shadow-lg">
-                    <div className='bg-base-200 p-1 md:p-2 shadow md:shadow-lg rounded md:rounded-lg'><img className='w-[40px] md:w-[80px] h-auto' src={partner.logo} alt="Partner's Logo" /></div>
-                    <p className='text-xs md:text-base'>{partner.name}</p>
+                    <div className='bg-base-100 p-1 md:p-2 shadow md:shadow-lg rounded md:rounded-lg'><img className='w-[40px] md:w-[80px] h-auto' src={partner.logo} alt="Partner's Logo" /></div>
+                    <p className='text-xs md:text-base text-primary font-bold'>{partner.name}</p>
                 </div>
                 ))}
             </Marquee>

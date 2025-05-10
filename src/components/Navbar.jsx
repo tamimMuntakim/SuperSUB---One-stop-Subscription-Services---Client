@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import "./Navbar.css";
+import { AuthContext } from '../providers/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = use(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => {
+                alert("logged out");
+            }).catch((error) => {
+                alert(error.code, error.message);
+            });
+    }
+
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/my-profile">My Profile</NavLink></li>
+        <li>{user && user.email}</li>
     </>
+
     return (
         <div className="navbar bg-base-100 p-0 flex justify-between">
             <div className="">
@@ -23,19 +37,27 @@ const Navbar = () => {
                 <Link to="/" className="btn btn-ghost text-lg md:text-2xl px-0 text-primary font-bold"><img width="50" height="50" src="https://i.ibb.co.com/N2Tn9j9M/subscription.png" alt="subscription" className='hidden md:inline' />Super<p className='-ml-1 text-secondary '>SUB</p></Link>
             </div>
             <div className="hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-4">
+                <ul className="menu menu-horizontal px-1 gap-4 items-center">
                     {links}
                 </ul>
             </div>
             <div className="flex gap-2 md:gap-4 items-center">
-                <div className="avatar avatar-online">
-                    <div className="w-8 md:w-10 rounded-full">
-                        <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
-                    </div>
-                </div>
-                <Link to="" className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Login</Link>
-            </div>
-        </div>
+                {user ?
+                    (
+                        <><div className="avatar avatar-online">
+                            <div className="w-8 md:w-10 rounded-full">
+                                <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
+                            </div>
+                        </div>
+                            <button onClick={handleLogout} className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Logout</button>
+                        </>)
+                    :
+                    (
+                        <Link to="/auth/login" className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Login</Link>
+                    )
+                }
+            </div >
+        </div >
     );
 };
 

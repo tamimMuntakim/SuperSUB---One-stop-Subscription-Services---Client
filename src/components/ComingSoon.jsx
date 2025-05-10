@@ -31,8 +31,8 @@ const ComingSoon = () => {
                         className="bg-white p-3 md:p-6 border border-slate-300 rounded-2xl shadow-md hover:shadow-lg"
                     >
                         <div className="flex items-start mb-4">
-                            <div className="bg-blue-50 p-2 md:p-3 rounded-lg mr-2 md:mr-4">
-                                <AiFillThunderbolt className="text-primary w-[25px] h-auto" />
+                            <div className="bg-primary p-2 md:p-3 rounded-lg mr-2 md:mr-4">
+                                <AiFillThunderbolt className="text-secondary w-[25px] h-auto" />
                             </div>
                             <div>
                                 <h3 className="md:text-xl font-bold">{feature.title}</h3>
@@ -40,8 +40,8 @@ const ComingSoon = () => {
                             </div>
                         </div>
                         <p className="text-sm md:text-base">{feature.description}</p>
-                        <button className="mt-4 text-primary text-sm md:text-base hover:font-medium flex items-center gap-2">
-                            Notify Me <LuBellPlus/>
+                        <button className="mt-4 text-primary text-sm md:text-base hover:font-medium flex items-center gap-1">
+                            Details coming soon... <LuBellPlus/>
                         </button>
                     </div>
                 ))}
