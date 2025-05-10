@@ -18,7 +18,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/my-profile">My Profile</NavLink></li>
-        <li>{user && user.email}</li>
+        <li><NavLink to="/my-services">My Services</NavLink></li>
     </>
 
     return (
@@ -47,7 +47,7 @@ const Navbar = () => {
                         <>
                             <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
                                 <div className="avatar avatar-online">
-                                    <div className="w-8 md:w-10 rounded-full">
+                                    <div className="w-6 md:w-8 rounded-full">
                                         <img src={user.photoURL} />
                                     </div>
                                 </div>

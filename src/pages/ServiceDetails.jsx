@@ -54,7 +54,7 @@ const ServiceDetails = () => {
                                 </ul>
                             </div>
                         </div>
-                <hr className='border border-dashed border-gray-500 w-full mt-2 md:mt-4' />
+                        <hr className='border border-dashed border-gray-500 w-full mt-2 md:mt-4' />
                         <Link to="/"><button className="btn rounded-4xl btn-primary font-bold px-4 mt-4 md:px-8 px-4 mt-4 md:mt-8 text-white"><IoArrowBackCircleSharp className='w-[25px] md:w-[30px] h-auto' />Back to Home</button></Link>
                     </div>
                 </div>

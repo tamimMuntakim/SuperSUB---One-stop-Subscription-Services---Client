@@ -9,6 +9,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "../providers/PrivateRoute";
+import MyServices from "../pages/MyServices";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
                 loader: () => fetch("/subscriptions.json"),
                 element: <PrivateRoute>
                     <ServiceDetails></ServiceDetails>
+                </PrivateRoute>,
+                hydrateFallbackElement: <Loader></Loader>,
+            },
+            {
+                path: "/my-services",
+                loader: () => fetch("/myServices.json"),
+                element: <PrivateRoute>
+                    <MyServices></MyServices>
                 </PrivateRoute>,
                 hydrateFallbackElement: <Loader></Loader>,
             },

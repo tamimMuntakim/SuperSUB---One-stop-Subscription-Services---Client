@@ -1,0 +1,80 @@
+[
+    {
+        "service_id": 3,
+        "service_name": "Developer Toolkit",
+        "credentials": [
+            {
+                "tool_name": "JetBrains IDE Pack",
+                "username": "dev_user@university.edu",
+                "password": "jetbrains2024pass",
+                "license_key": "JB-EDU-2024-5678-XYZ",
+                "license_type": "Educational License",
+                "expiry_date": "2024-12-15"
+            },
+            {
+                "tool_name": "GitHub Copilot",
+                "username": "gh_user@university.edu",
+                "password": "github2024code",
+                "license_key": "GHCP-UNIV-2024-ABCD",
+                "license_type": "Student License",
+                "expiry_date": "2024-11-30"
+            }
+        ]
+    },
+    {
+        "service_id": 5,
+        "service_name": "STEM Education Bundle",
+        "credentials": [
+            {
+                "tool_name": "Wolfram Alpha",
+                "username": "wolfram_user@university.edu",
+                "password": "wolfram123math",
+                "license_key": "WOLF-EDU-2024-7890",
+                "license_type": "Student Pro",
+                "expiry_date": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "service_id": 2,
+        "service_name": "Academic Research Pro",
+        "credentials": [
+            {
+                "tool_name": "IEEE Xplore",
+                "username": "ieee_researcher",
+                "password": "ieeeaccess2024",
+                "license_key": "IEEE-UNIV-2024-TOKEN",
+                "license_type": "Institutional Access",
+                "expiry_date": "2024-10-01"
+            }
+        ]
+    },
+    {
+        "service_id": 7,
+        "service_name": "Cloud Engineering Suite",
+        "credentials": [
+            {
+                "tool_name": "AWS Educate",
+                "username": "aws_student",
+                "password": "awscloud2024",
+                "license_key": "AWS-EDU-2024-CREDITS",
+                "license_type": "Student Credits",
+                "expiry_date": "2024-09-15"
+            }
+        ]
+    },
+    {
+        "service_id": 9,
+        "service_name": "AI Research Platform",
+        "credentials": [
+            {
+                "tool_name": "PyTorch Premium",
+                "username": "pytorch_user",
+                "password": "torch2024ai",
+                "license_key": "PT-UNIV-2024-GPU",
+                "license_type": "GPU Access License",
+                "expiry_date": "2024-08-20"
+            }
+        ]
+    }
+]

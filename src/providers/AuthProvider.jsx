@@ -40,9 +40,9 @@ const AuthProvider = ({ children }) => {
         })
             .then(() => {
                 console.log("profile updated");
-            }).catch((error) => {
+            }).catch(() => {
                 console.log("error in profile update");
-                
+
             });
     }
 
