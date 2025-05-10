@@ -44,11 +44,14 @@ const Navbar = () => {
             <div className="flex gap-2 md:gap-4 items-center">
                 {user ?
                     (
-                        <><div className="avatar avatar-online">
-                            <div className="w-8 md:w-10 rounded-full">
-                                <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
+                        <>
+                            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+                                <div className="avatar avatar-online">
+                                    <div className="w-8 md:w-10 rounded-full">
+                                        <img src={user.photoURL} />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                             <button onClick={handleLogout} className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Logout</button>
                         </>)
                     :

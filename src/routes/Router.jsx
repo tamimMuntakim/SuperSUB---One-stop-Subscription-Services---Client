@@ -8,6 +8,7 @@ import ServiceDetails from "../pages/ServiceDetails";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoute from "../providers/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
             {
                 path: "/service-details/:id",
                 loader: () => fetch("/subscriptions.json"),
-                element: <ServiceDetails></ServiceDetails>,
+                element: <PrivateRoute>
+                    <ServiceDetails></ServiceDetails>
+                </PrivateRoute>,
                 hydrateFallbackElement: <Loader></Loader>,
             },
         ]
