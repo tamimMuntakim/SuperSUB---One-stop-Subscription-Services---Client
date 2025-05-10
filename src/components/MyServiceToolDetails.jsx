@@ -8,19 +8,19 @@ const MyServiceToolDetails = ({ toolCredential }) => {
                 <legend className="fieldset-legend md:text-base">{tool_name}</legend>
 
                 <label className="label">Username</label>
-                <input type="text" className="input" value={username} readOnly/>
+                <input type="text" className="input" defaultValue={username} readOnly/>
 
                 <label className="label">Password</label>
-                <input type="text" className="input" value={password} readOnly/>
+                <input type="text" className="input" defaultValue={password} readOnly/>
 
                 <label className="label">License Key</label>
-                <input type="text" className="input" value={license_key} readOnly/>
+                <input type="text" className="input" defaultValue={license_key} readOnly/>
 
                 <label className="label">License Type</label>
-                <input type="text" className="input" value={license_type} readOnly/>
+                <input type="text" className="input" defaultValue={license_type} readOnly/>
 
                 <label className="label">Expiry Date</label>
-                <input type="text" className="input" value={expiry_date} readOnly/>
+                <input type="text" className="input" defaultValue={expiry_date} readOnly/>
             </fieldset>
         </div>
     );

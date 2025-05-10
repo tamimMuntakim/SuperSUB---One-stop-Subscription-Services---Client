@@ -35,12 +35,15 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateInfo = (name, photo) => {
+        setLoading(true);
         updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo,
         })
             .then(() => {
                 console.log("profile updated");
+                setLoading(false);
             }).catch(() => {
+                setLoading(false);
                 console.log("error in profile update");
 
             });
