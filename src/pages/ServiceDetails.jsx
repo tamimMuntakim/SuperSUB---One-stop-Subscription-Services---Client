@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { use, useState } from 'react';
 import { IoArrowBackCircleSharp } from 'react-icons/io5';
 import { TbFaceIdError } from 'react-icons/tb';
 import { Link, useLoaderData, useParams } from 'react-router';
@@ -26,14 +26,10 @@ const ServiceDetails = () => {
         }
         const newUserReviews = [...userReviews, newReview];
         setUserReviews(newUserReviews);
-    }
-
-    useEffect(() => {
         toast.success("Successfully Updated Review!", {
             autoClose: 1500,
         });
-    }, [userReviews]);
-
+    }
 
     if (service) {
         const { name, banner, frequency, price, description, tech_category, features, subscription_benefits, ratings, number_of_reviews } = service;
