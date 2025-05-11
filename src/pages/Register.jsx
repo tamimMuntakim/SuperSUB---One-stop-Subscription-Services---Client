@@ -2,10 +2,13 @@
 import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../providers/AuthProvider';
+import { toast } from 'react-toastify';
+import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     const [error, setError] = useState("");
     const [passwordError, setPasswordError] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
 
     const { createUser, googleSignIn, updateInfo } = use(AuthContext);
 
@@ -32,9 +35,14 @@ const Register = () => {
             .then(() => {
                 updateInfo(name, photo);
                 navigate("/");
+                toast.success("Successfully Registered and Logged In!", {
+                    autoClose: 1500,
+                });
             })
             .catch((error) => {
-                setError(error.code);
+                toast.error(error.code, {
+                    autoClose: 1500,
+                });
             })
     }
 
@@ -42,14 +50,20 @@ const Register = () => {
         googleSignIn()
             .then(() => {
                 navigate("/");
+                toast.success("Successfully Logged In!", {
+                    autoClose: 1500,
+                });
             })
             .catch((error) => {
-                setError(error.code);
+                toast.error(error.code, {
+                    autoClose: 1500,
+                });
             });
     }
 
     return (
         <div className="flex justify-center items-center">
+            <title>SuperSUB || Register</title>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
                 <h2 className="font-semibold text-lg md:text-2xl text-center">
                     Register your account
@@ -84,13 +98,17 @@ const Register = () => {
                         />
 
                         <label className="label">Password</label>
-                        <input
-                            name="password"
-                            type="password"
-                            className="input"
-                            placeholder="Password"
-                            required
-                        />
+                        <div className='input'>
+                            <input
+                                name="password"
+                                type={(showPassword) ? "text" : "password"}
+                                placeholder="Password"
+                                required
+                            />
+                            <button type='button' className='text-xs md:text-base' onClick={() => setShowPassword(!showPassword)}>
+                                {(!showPassword) ? <FaRegEye /> : <FaRegEyeSlash />}
+                            </button>
+                        </div>
 
                         {passwordError && <p className="text-red-500 text-xs text-center mt-2">{passwordError}</p>}
                         {error && <p className="text-red-500 text-xs text-center mt-2">{error}</p>}

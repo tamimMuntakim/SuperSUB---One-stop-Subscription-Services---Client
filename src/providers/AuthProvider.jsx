@@ -1,7 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from '../../fiebase.config';
 import { GoogleAuthProvider } from "firebase/auth";
+import { toast } from 'react-toastify';
 
 export const AuthContext = createContext();
 
@@ -12,8 +13,6 @@ const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-
-    console.log(user);
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -40,13 +39,21 @@ const AuthProvider = ({ children }) => {
             displayName: name, photoURL: photo,
         })
             .then(() => {
-                console.log("profile updated");
+                toast.success("Successfully Updated Prtofile!", {
+                    autoClose: 1500,
+                });
                 setLoading(false);
             }).catch(() => {
+                toast.error("Update Failed!", {
+                    autoClose: 1500,
+                });
                 setLoading(false);
-                console.log("error in profile update");
 
             });
+    }
+
+    const sendResetPasswordEmail = (email) =>{
+        return sendPasswordResetEmail(auth,email) ;
     }
 
     useEffect(() => {
@@ -67,6 +74,7 @@ const AuthProvider = ({ children }) => {
         googleSignIn,
         logOut,
         updateInfo,
+        sendResetPasswordEmail,
         loading,
         setLoading
     };

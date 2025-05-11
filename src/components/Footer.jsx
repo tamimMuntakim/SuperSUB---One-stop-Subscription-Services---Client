@@ -12,8 +12,8 @@ const Footer = () => {
                 <nav className="flex flex-col md:flex-row gap-2 md:gap-8">
                     <Link className="link link-hover" to="/">Home</Link>
                     <Link className="link link-hover" to="/my-profile">My Profile</Link>
-                    <Link className="link link-hover" to="my-profile">Terms and Conditions</Link>
-                    <Link className="link link-hover" to="/blogs">Privacy Policy</Link>
+                    <Link className="link link-hover" to="">Terms and Conditions</Link>
+                    <Link className="link link-hover" to="">Privacy Policy</Link>
                 </nav>
                 <hr className='border border-dashed border-gray-500 w-full' />
                 <nav>

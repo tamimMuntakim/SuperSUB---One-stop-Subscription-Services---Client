@@ -1,27 +1,25 @@
 import React, { use } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { format } from 'date-fns';
-import { useNavigate } from 'react-router';
 
 const MyProfile = () => {
-    const { user, updateInfo, loading } = use(AuthContext);
+    const { user, updateInfo } = use(AuthContext);
     const { displayName, email, photoURL, metadata } = user;
-    const lastLogIntime = format(new Date(metadata.lastSignInTime), "EEEE, MMMM MM, yyyy : hh-mm-ss a ")
-    const navigate = useNavigate();
+    const lastLogIntime = format(new Date(metadata.lastSignInTime), "EEEE, MMMM d, yyyy : hh-mm-ss a ")
     const handleProfileDetailsChange = (e) => {
         e.preventDefault();
         const form = e.target;
         const newName = form.name.value;
         const newPhotoURL = form.photo.value;
         updateInfo(newName, newPhotoURL);
-        // !loading && navigate("/my-profile");
     }
 
     return (
         <div>
+            <title>SuperSUB || My Profile</title>
             <div className='flex flex-col justify-center items-center'>
-                <div className='p-2 border-2 rounded-full border-secondary mb-4 shadow-xl'>
-                    <img src={photoURL} alt="" className='w-[50px] h-auto' />
+                <div className='p-2 border-2 rounded-full border-secondary mb-4 shadow-xl overflow-hidden'>
+                    <img src={photoURL} alt="" className='w-[45px] md:w-[60px] h-auto rounded-full' />
                 </div>
                 <fieldset className="fieldset bg-base-200 border-base-300 w-full md:w-sm rounded-box border p-4">
                     <legend className="fieldset-legend text-center text-base md:text-xl bg-base-100 px-6 rounded-2xl border border-slate-200 shadow-xl text-primary">{displayName}</legend>
@@ -30,7 +28,7 @@ const MyProfile = () => {
                     <input type="text" className="input" placeholder="Email" defaultValue={email} readOnly />
 
                     <label className="label">Photo URL</label>
-                    <input type="text" className="input" placeholder="Email" defaultValue={photoURL} />
+                    <input type="text" className="input" placeholder="Email" defaultValue={photoURL} readOnly />
 
                     <label className="label">Last LogIn time</label>
                     <input type="text" className="input" placeholder="Last login time" defaultValue={lastLogIntime} readOnly />

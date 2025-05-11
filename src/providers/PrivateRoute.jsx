@@ -4,17 +4,17 @@ import { AuthContext } from './AuthProvider';
 import { Navigate, useLocation } from 'react-router';
 import Loader from '../pages/Loader';
 
-const PrivateRoute = ({children}) => {
-    const {user, loading} = use(AuthContext);
+const PrivateRoute = ({ children }) => {
+    const { user, loading } = use(AuthContext);
 
     const location = useLocation();
 
-    if(loading){
+    if (loading) {
         return <Loader></Loader>;
     }
-    else if(user && user.email){
+    else if (user && user.email) {
         return (children);
-    }else{
+    } else {
         return <Navigate state={location.pathname} to="/auth/login"></Navigate>
     }
 };

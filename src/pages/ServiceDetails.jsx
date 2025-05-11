@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { IoArrowBackCircleSharp } from 'react-icons/io5';
 import { TbFaceIdError } from 'react-icons/tb';
 import { Link, useLoaderData, useParams } from 'react-router';
+import { AuthContext } from '../providers/AuthProvider';
+import UserReview from '../components/UserReview';
+import { toast } from 'react-toastify';
 
 const ServiceDetails = () => {
     const subscriptionServices = useLoaderData();
+    const { user } = use(AuthContext);
     const { id } = useParams();
     const service = subscriptionServices.find(service => service.id == id);
+
+    const [userReviews, setUserReviews] = useState([]);
+
+    const handleReview = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const review = form.review.value;
+        const rating = form.rating.value;
+        const newReview = {
+            userName: user.displayName,
+            review,
+            rating
+        }
+        const newUserReviews = [...userReviews, newReview];
+        setUserReviews(newUserReviews);
+    }
+
+    useEffect(() => {
+        toast.success("Successfully Updated Review!", {
+            autoClose: 1500,
+        });
+    }, [userReviews]);
+
+
     if (service) {
         const { name, banner, frequency, price, description, tech_category, features, subscription_benefits, ratings, number_of_reviews } = service;
 
         return (
             <div className='p-1 md:p-2 shadow md:shadow-xl rounded-lg md:rounded-2xl border-slate-300 overflow-hidden'>
+                <title>SuperSUB || Service Details</title>
                 <div
                     style={{
                         backgroundImage: `url(${banner})`,
@@ -55,7 +84,52 @@ const ServiceDetails = () => {
                             </div>
                         </div>
                         <hr className='border border-dashed border-gray-500 w-full mt-2 md:mt-4' />
-                        <Link to="/"><button className="btn rounded-4xl btn-primary font-bold px-4 mt-4 md:px-8 px-4 mt-4 md:mt-8 text-white"><IoArrowBackCircleSharp className='w-[25px] md:w-[30px] h-auto' />Back to Home</button></Link>
+                        <form onSubmit={handleReview} className="card-body mt-4 border border-slate-300 rounded-xl md:w-sm md:mx-auto">
+                            <h2 className='text-center md:text-lg md:font-semibold'>Submit Review and Rating</h2>
+                            <fieldset className="fieldset">
+                                <label className="label">Review</label>
+                                <input
+                                    name="review"
+                                    type="text"
+                                    className="input"
+                                    placeholder="Review"
+                                    required
+                                />
+
+                                <label className="label">Rating</label>
+                                <input
+                                    name="rating"
+                                    type="number"
+                                    className="input"
+                                    placeholder="Rate from 1 to 5"
+                                    min="1"
+                                    max="5"
+                                    required
+                                />
+
+                                <button type="submit" className="btn btn-neutral mt-4">
+                                    Save Review
+                                </button>
+
+                            </fieldset>
+                        </form>
+                        <hr className='border border-dashed border-gray-500 w-full mt-2 md:mt-4' />
+                        {
+                            userReviews.length > 0 && (
+                                <div>
+                                    <h2 className='font-bold md:text-xl mb-4 text-center'>User Reviews</h2>
+                                    <div className='flex gap-4 flex-wrap items-center justify-center'>
+                                        {userReviews.map((userReview, index) => (
+                                            <UserReview key={index} userReview={userReview} />
+                                        ))}
+                                    </div>
+                                </div>
+                            )
+                        }
+
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        <Link to="/"><button className="btn rounded-4xl btn-primary font-bold px-4 mt-4 md:px-8 md:mt-8 text-white"><IoArrowBackCircleSharp className='w-[25px] md:w-[30px] h-auto' />Back to Home</button></Link>
                     </div>
                 </div>
             </div>
