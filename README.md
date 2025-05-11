@@ -2,6 +2,12 @@
 
 SuperSUB is a comprehensive subscription management platform designed to help students, researchers, and professionals manage their subscription services for engineering tools, academic resources, and more. With SuperSUB, users can explore, manage, and review their subscriptions in one centralized location.
 
+## 🌐 Live Demo
+
+Check out the live version of the app here: [SuperSUB || One-stop Subscription Services](https://assignment-lily-tamim.web.app/)
+
+> 🚀 Deployed using Firebase Hosting
+
 ## Features
 
 - **Subscription Management**: View and manage your active subscription services.
